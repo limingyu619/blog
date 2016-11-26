@@ -69,4 +69,4 @@ theme: yilla
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/limingyu619/limingyu619.git
+  repo: https://github.com/limingyu619/limingyu619.github.io.git
