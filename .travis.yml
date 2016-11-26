@@ -8,7 +8,7 @@ cache:
 
 before_install:
   - npm install -g hexo-cli # 安装 hexo
-  - git clone git@github.com:limingyu619/hexo-theme-yilia.git themes/yilla
+  - git clone https://github.com/limingyu619/hexo-theme-yilia.git themes/yilla
 
 # S: Build Lifecycle
 install:
