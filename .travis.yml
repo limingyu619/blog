@@ -1,0 +1,25 @@
+language: node_js
+node_js: stable
+
+# cache this directory
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm install -g hexo-cli # 安装 hexo
+  - git clone git@github.com:limingyu619/hexo-theme-yilia.git themes/yilla
+
+# S: Build Lifecycle
+install:
+  - npm install # 安装 package.json 中的插件
+
+script:
+  - hexo generate
+
+after_success:
+  - git config --global user.name "Mingyu Li"
+  - git config --global user.email "541509358@qq.com"
+  - sed -i'' "/^ *repo/s~github\.com~${githubToken}@github.com~" _config.yml
+  - hexo deploy
+# E: Build LifeCycle
